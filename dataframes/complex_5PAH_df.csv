@@ -1,0 +1,5 @@
+ligand,UNL1,UNL1,UNL1,UNL1,UNL1,UNL1,UNL1,UNL1,UNL1,UNL1
+protein,ALA132.A,ALA165.A,ALA246.A,ARG243.A,HIS264.A,ILE135.A,LEU249.A,PHE131.A,PRO244.A,VAL245.A
+interaction,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic
+Frame,,,,,,,,,,
+0,"(0, 4)","(0, 1)","(0, 1)","(1, 8)","(2, 7)","(4, 6)","(3, 7)","(3, 1)","(0, 2)","(0, 1)"

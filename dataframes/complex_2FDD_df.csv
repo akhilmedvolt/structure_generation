@@ -1,0 +1,5 @@
+ligand,UNL1,UNL1,UNL1,UNL1,UNL1,UNL1
+protein,ALA28.B,ASP29.B,ASP30.B,ILE47.B,LEU76.B,VAL32.B
+interaction,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic,Hydrophobic
+Frame,,,,,,
+0,"(0, 4)","(1, 1)","(0, 1)","(0, 7)","(4, 6)","(0, 6)"
