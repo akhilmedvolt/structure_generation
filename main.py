@@ -28,6 +28,19 @@ if __name__ == "__main__":
     curr_files = [x.split("/")[1] for x in glob.glob("./*") if ".pdb" in x]
     print(curr_files)
 
+
+
     for file in curr_files:
-        generate_2d_viz(file)
-        generate_3d_viz(file)
+        try:
+            generate_2d_viz(file)
+        except:
+            with open("log.txt", "a") as f:
+                f.write(f" 2D failed for {str(file)}")
+            pass
+        try:
+            generate_3d_viz(file)
+        except:
+            with open("log.txt", "a") as f:
+                f.write(f" 3D failed for {str(file)}")
+            pass
+
