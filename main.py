@@ -9,7 +9,7 @@ import os
 import shutil
 
 if __name__ == "__main__":
-    link = "s3://medvolt-drp/results/client_6/workspace_1/project_1/experiment_1/C1CCC(C(C1)/"
+    link = "s3://medvolt-drp/results/client_6/workspace_1/project_1/experiment_1/C1CCC(C(C1)CN2CCN(CC2)C3=NSC4=CC=CC=C43)CN5C(=O)C6C7CCC(C7)C6C5=O/"
     download_folder = link.split("/")[8]
     s3_download(link, download_folder)
 
