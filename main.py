@@ -29,6 +29,7 @@ if __name__ == "__main__":
 
     print("processing")
     for file in curr_files:
+        gc.collect()
         print("current file: ", str(file))
         try:
             generate_2d_viz(file)
