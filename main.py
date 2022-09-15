@@ -1,4 +1,5 @@
 import glob
+import gc
 
 from generate_2d_viz import generate_2d_viz
 from generate_3d_viz import generate_3d_viz
@@ -9,6 +10,8 @@ import shutil
 
 if __name__ == "__main__":
     link = "s3://medvolt-drp/results/client_6/workspace_1/project_1/experiment_1/C1CCC(C(C1)CN2CCN(CC2)C3=NSC4=CC=CC=C43)CN5C(=O)C6C7CCC(C7)C6C5=O/"
+    # link = "s3://medvolt-drp/results/client_6/workspace_1/project_1/experiment_1/C1CCC(C(C1)/"
+
     s3_download(link)
 
     f_list = [x for x in Path("pdbid/").rglob('*.pdb')]
@@ -29,13 +32,9 @@ if __name__ == "__main__":
         print("current file: ", str(file))
         try:
             generate_2d_viz(file)
-        except:
-            with open("log.txt", "a") as f:
-                f.write(f" 2D failed for {str(file)} \n")
-            pass
-        try:
+            gc.collect()
             generate_3d_viz(file)
         except:
             with open("log.txt", "a") as f:
-                f.write(f" 3D failed for {str(file)} \n")
+                f.write(f"failed for {str(file)} \n")
             pass
